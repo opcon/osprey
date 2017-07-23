@@ -6,5 +6,6 @@ alt = ""
 color = ""
 link1 = ""
 link2 = ""
+full = false
 draft = true
 +++

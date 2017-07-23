@@ -6,9 +6,11 @@
 // Colors
 // https://coolors.co/1e1e1e-4e6b6c-f7f7f7-ffffff-da784d
 $black: #212121;
+$lightblack: #262626;
 $storm: #4E6B6C;
 $smoke: #F7F7F7;
 $accent: #DA784D;
+$white: #FFF;
 
 // Fonts
 $font-header: "Bitter", "Roboto Slab", "Cambria", Georgia, serif;
@@ -84,7 +86,7 @@ $breakpoint-small: 25em; // 400px
   vertical-align: baseline;
   margin: 0;
   padding: 0;
-  color: $black;
+  color: $white;
   &:before, &:after {
     box-sizing: border-box;
   }
@@ -101,7 +103,7 @@ body {
 }
 header {
   height: 100vh;
-  background-color: #FFF;
+  background-color: $black;
   div { z-index: 101; }
   img { max-height: $vertical-rhythm * 6; }
   h1 { font-family: $font-body; }
@@ -109,12 +111,12 @@ header {
 }
 @keyframes "blink" {
   from, to { color: transparent; }
-  50% { color: $black; }
+  50% { color: $white; }
 }
 nav {
   height: $vertical-rhythm * 2;
   width: 100%;
-  background-color: #FFF;
+  background-color: $black;
   position: absolute;
   bottom: 0;
   z-index: 100;
@@ -153,7 +155,7 @@ nav {
   transform: translate(0px, 0px);
   transition: 0.25s ease-out;
   a {
-    color: #FFF;
+    color: $white;
     &:hover {
       color: $accent;
     }
@@ -163,7 +165,7 @@ nav {
   transform: translate(-100vw, 0px);
 }
 main {
-  background-color: #fff;
+  background-color: $black;
   transform: translate(0px, 0px);
   transition: 0.25s ease-in;
 }
@@ -366,7 +368,7 @@ blockquote {
 }
 .about {
   width: 100%;
-  background-color: $smoke;
+  background-color: $lightblack;
   padding-bottom: $vertical-rhythm * 2;
   p {
     @include size(h3);
@@ -429,13 +431,13 @@ blockquote {
   transition: .2s ease-out;
   background-color: $black;
   a {
-    color: #FFF;
+    color: $white;
     &:hover {
       color: $accent;
     }
   }
   h2 {
-    color: #FFF;
+    color: $white;
   }
   h3 {
     font-family: $font-body;
@@ -450,7 +452,7 @@ blockquote {
 }
 .contact {
   width: 100%;
-  background-color: $smoke;
+  background-color: $lightblack;
   padding-bottom: $vertical-rhythm * 2;
   form {
     margin-top: $vertical-rhythm;
@@ -461,7 +463,7 @@ blockquote {
   }
 }
 input {
-  background-color: #FFF;
+  background-color: $white;
   border-color: $smoke;
   border-radius: 3px;
   border-width: 1px;
@@ -472,11 +474,11 @@ input {
   width: 100%;
   &[type="submit"] {
     background-color: $storm;
-    color: #FFF;
+    color: $white;
     transition: .2s ease-out;
     &:hover {
       background-color: $accent;
-      color: #FFF;
+      color: $white;
       cursor: pointer;
     }
   }
@@ -490,6 +492,20 @@ footer {
   height: $vertical-rhythm * 6;
   background-color: $black;
   div, a {
-    color: #FFF;
+    color: $white;
   }
+}
+
+.valign {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.gallery .full-img {
+    padding: 0px;
+}
+
+.about .container {
+    max-width: 50rem;
 }
