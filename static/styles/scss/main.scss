@@ -107,9 +107,11 @@ header {
   div { z-index: 101; }
   img { max-height: $vertical-rhythm * 6; }
   h1 { font-family: $font-body; }
-  .cursor { animation: 1s blink step-end infinite; }
+  .cursor { 
+      animation: 1s blink step-end infinite; 
+  }
 }
-@keyframes "blink" {
+@keyframes blink {
   from, to { color: transparent; }
   50% { color: $white; }
 }
